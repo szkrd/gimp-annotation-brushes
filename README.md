@@ -8,8 +8,23 @@ I couldn't find a good annotation tool for linux, so I decided to generate some 
 2. `npm i`
 3. `npm start`
 4. copy generated png files to a Gimp brush directory (preferences/folders/brushes) 
+5. open Gimp, use [this script](https://www.xresch.com/gimp-convert-pngs-to-brushes-552) after modifying the `source_folder` and `dest_folder` part via **filters/python-fu/console**:
 
-## Examples
+```python
+from gimpfu import *
+import os
+
+def convert_png_to_gbr():
+    source_folder = "/home/USERNAME/temp/input"
+    dest_folder = "/home/USERNAME/temp/output"
+    for filename in os.listdir(source_folder):
+        img = pdb.gimp_file_load(source_folder+"/"+filename,filename)
+        pdb.file_gbr_save(img, img.layers[0], dest_folder +"/"+ filename+".gbr", filename, 100, filename)
+
+convert_png_to_gbr()
+```
+
+## Example pngs
 
 ![](./docs/black_01.png)
 ![](./docs/black_02.png)
