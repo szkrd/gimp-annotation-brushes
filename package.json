@@ -1,0 +1,28 @@
+{
+  "name": "gimp-annotation-brushes",
+  "description": "render 64x64 annotation brushes for gimp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "server-only": "node index.js --server-only"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "4.17.1",
+    "puppeteer": "1.20.0"
+  },
+  "devDependencies": {
+    "eslint": "6.4.0",
+    "eslint-config-prettier": "6.3.0",
+    "eslint-config-standard": "14.1.0",
+    "eslint-plugin-import": "2.18.2",
+    "eslint-plugin-node": "10.0.0",
+    "eslint-plugin-prettier": "3.1.1",
+    "eslint-plugin-promise": "4.2.1",
+    "eslint-plugin-standard": "4.0.1",
+    "prettier": "1.18.2"
+  }
+}

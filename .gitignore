@@ -1,0 +1,9 @@
+node_modules
+.idea
+.vscode
+.DS_Store
+.mc
+*.log
+.env
+.cache-loader
+output/*.png
