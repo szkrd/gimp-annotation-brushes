@@ -7,8 +7,7 @@ I couldn't find a good annotation tool for linux, so I decided to generate some 
 1. edit [config](./config.json) file
 2. `npm i`
 3. `npm start`
-4. copy generated png files to a Gimp brush directory (preferences/folders/brushes) 
-5. open Gimp, use [this script](https://www.xresch.com/gimp-convert-pngs-to-brushes-552) after modifying the `source_folder` and `dest_folder` part via **filters/python-fu/console**:
+4. open Gimp, use [this script](https://www.xresch.com/gimp-convert-pngs-to-brushes-552) after modifying the `source_folder` and `dest_folder` part via **filters/python-fu/console**:
 
 ```python
 from gimpfu import *
