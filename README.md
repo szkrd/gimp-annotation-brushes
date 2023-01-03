@@ -2,6 +2,8 @@
 
 I couldn't find a good annotation tool for linux, so I decided to generate some annotation brushes for Gimp.
 
+To make life easier the generated `png` and `gbr` files are included in the project.
+
 ## Usage
 
 1. edit [config](./config.json) file
@@ -14,14 +16,18 @@ from gimpfu import *
 import os
 
 def convert_png_to_gbr():
-    source_folder = "/home/USERNAME/temp/input"
-    dest_folder = "/home/USERNAME/temp/output"
+    source_folder = "/home/USERNAME/temp/gimp-annotation-brushes/output"
+    dest_folder = "/home/USERNAME/temp/gimp-annotation-brushes/gbr"
     for filename in os.listdir(source_folder):
         img = pdb.gimp_file_load(source_folder+"/"+filename,filename)
         pdb.file_gbr_save(img, img.layers[0], dest_folder +"/"+ filename+".gbr", filename, 100, filename)
 
 convert_png_to_gbr()
 ```
+
+When you have the `gbr` files ready, righ click inside gimp's brush palette, select
+**Show in File Manager**, drag/copy the gbr files to the directory and then right
+click and select **Refresh Brushes**.
 
 ## Example pngs
 
